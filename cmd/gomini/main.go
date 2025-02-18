@@ -59,5 +59,5 @@ func main() {
 	}
 	url := args[0]
 
-	println(make_gemini_query(url))
+	fmt.Println(make_gemini_query(url))
 }
