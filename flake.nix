@@ -18,16 +18,6 @@
         name = "wiwe";
         version = "latest";
         vendorHash = null; # update whenever go.mod changes
-        dependencies = with pkgs; [
-          vulkan-headers
-          libxkbcommon
-          wayland
-          xorg.libX11
-          xorg.libXcursor
-          xorg.libXfixes
-          libGL
-          pkg-config
-        ];
       in {
         devShells = {
           default = pkgs.mkShell {
@@ -39,8 +29,7 @@
           default = pkgs.buildGoModule {
             inherit name vendorHash;
             src = ./.;
-            subPackages = ["cmd/wiwe"];
-            buildInputs = dependencies;
+            subPackages = ["cmd/gomini"];
           };
 
           docker = pkgs.dockerTools.buildImage {
