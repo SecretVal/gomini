@@ -15,7 +15,7 @@
         system,
         ...
       }: let
-        name = "gomini";
+        name = "wiwe";
         version = "latest";
         vendorHash = null; # update whenever go.mod changes
         dependencies = with pkgs; [
@@ -39,7 +39,7 @@
           default = pkgs.buildGoModule {
             inherit name vendorHash;
             src = ./.;
-            subPackages = ["cmd/gomini"];
+            subPackages = ["cmd/wiwe"];
             buildInputs = dependencies;
           };
 
