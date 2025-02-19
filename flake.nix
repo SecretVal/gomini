@@ -30,6 +30,16 @@
             inherit name vendorHash;
             src = ./.;
             subPackages = ["cmd/gomini"];
+            buildInputs = with pkgs; [
+              vulkan-headers
+              libxkbcommon
+              wayland
+              xorg.libX11
+              xorg.libXcursor
+              xorg.libXfixes
+              libGL
+              pkg-config
+            ];
           };
 
           docker = pkgs.dockerTools.buildImage {
