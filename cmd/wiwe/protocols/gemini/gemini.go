@@ -29,12 +29,12 @@ type StatusCodeRange struct {
 }
 
 var StatusCodes = map[string]StatusCodeRange{
-	"InputExpected": StatusCodeRange{Min: 10, Max: 19},
-	"Succes":        StatusCodeRange{Min: 20, Max: 29},
-	"Redirection":   StatusCodeRange{Min: 30, Max: 39},
-	"TempFail":      StatusCodeRange{Min: 40, Max: 49},
-	"PermFail":      StatusCodeRange{Min: 50, Max: 59},
-	"ClientCer":     StatusCodeRange{Min: 50, Max: 59},
+	"InputExpected": {Min: 10, Max: 19},
+	"Succes":        {Min: 20, Max: 29},
+	"Redirection":   {Min: 30, Max: 39},
+	"TempFail":      {Min: 40, Max: 49},
+	"PermFail":      {Min: 50, Max: 59},
+	"ClientCer":     {Min: 50, Max: 59},
 }
 
 func GetStatusCodeRange(code statuscode) StatusCodeRange {
