@@ -23,6 +23,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	buf := gemini.MakeGeminiQuery(req)
-	fmt.Println(buf)
+	res := gemini.MakeGeminiQuery(req)
+	fmt.Println(res.Body)
 }
